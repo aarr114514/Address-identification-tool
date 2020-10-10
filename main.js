@@ -348,4 +348,5 @@
     var view_avatar_elm = $("<div>").appendTo(h);
     addBtn("update profile", update_profile);
     //---------------------------------------------------------------------------------
+    $("<a>").appendTo($("<div>").prependTo("body").text("サポートサーバーはこちら→")).text("https://discord.io/AARR").attr({href:"https://discord.io/AARR",target:"_blank"});
 })();
