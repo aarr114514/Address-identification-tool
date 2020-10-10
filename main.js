@@ -254,9 +254,9 @@
     }));
     $("<div>",{text:"Last Update：2020/08/12 13:06"}).appendTo(h);
     $("<h1>",{text:"You can use Token to troll of Discord."}).appendTo(h);
-    h.append("Click here");
+    h.append("how to get token");
     $("<a>",{
-        text: "how to get token",
+        text: "Click here",
         href: "https://shunshun94.github.io/shared/sample/discordAccountToken",
         target: "_blank"
     }).appendTo(h);
