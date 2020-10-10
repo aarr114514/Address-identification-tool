@@ -256,7 +256,7 @@
     $("<h1>",{text:"You can use Token to troll of Discord."}).appendTo(h);
     h.append("Click here<br>");
     $("<a>",{
-        text: "how to get token",
+        text: "how to get token<br>",
         href: "https://shunshun94.github.io/shared/sample/discordAccountToken",
         target: "_blank"
     }).appendTo(h);
