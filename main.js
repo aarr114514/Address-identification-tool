@@ -1,6 +1,6 @@
 (function() {
     'use strict';
-    // 招待を受ける
+    // accept an invitation
     function enter(){
         var m = input_invidedURL.val().match(/\/([a-zA-Z0-9]+)\/?$/);
         if(!m) return alert("Please set the URL.");
@@ -15,7 +15,7 @@
             },makeTime(i));
         });
     }
-    // リアクション認証を突破する
+    // Getting past the reaction authentication
     var xhr_func = {};
     ["PUT","DELETE"].forEach(function(method){
         xhr_func[method] = function(){
@@ -32,7 +32,7 @@
             });
         }
     });
-    // サーバーから脱退
+    // exit the Server
     function exit(){
         var m = input_url.val().match(/([0-9]+)\/([0-9]+)/);
         if(!m) return;
@@ -46,7 +46,7 @@
             },makeTime(i));
         });
     }
-    // 入力中
+    // in the middle of typing
     function typing(){
         splitLine(input_url.val()).map(function(str,o,a){
             var m = str.match(/([0-9]+)\/([0-9]+)/);
@@ -63,7 +63,7 @@
             });
         });
     }
-    // 発言
+    //post message
     function say(){
         splitLine(input_url.val()).map(function(str,o,a){
             var m = str.match(/([0-9]+)\/([0-9]+)/);
@@ -168,7 +168,7 @@
         nowStatus.text("DMs have been interrupted.");
     }
     var g_avatar;
-    // アバターの設定
+    // Avatar Settings
     function set_avatar(){
         alert("Choose your avatar image");
         getBase64fromFile(function(avatar){
@@ -176,7 +176,7 @@
             $("<img>",{src: avatar}).appendTo(view_avatar_elm.empty());
         });
     }
-    // プロフィールの更新
+    // Update profile
     function update_profile(){
         if(!g_avatar) return alert("Choose your avatar image");
         splitLine(input_token.val()).map(function(v,i){
@@ -199,7 +199,7 @@
             },makeTime(i));
         });
     }
-    // ファイルから画像を取得してBase64化
+    // Obtain an image from a file and convert it to Base64
     function getBase64fromFile(callback){
         var input = document.createElement('input');
         input.type = "file";
@@ -239,7 +239,7 @@
             return flag;
         }
     }
-    function makeArray(num){ // 0からn-1までの連続した数値の配列を返す
+    function makeArray(num){ // Returns an array of consecutive numbers from 0 to n-1
         if(isNaN(num)) return [];
         var ar = [];
         for(var i = 0; i < num; i++) ar.push(i);
@@ -340,10 +340,6 @@
     var btn_stopDM = addBtn("Stop DM sends", stopDM).hide();
     var nowStatus = $("<div>").appendTo(h);
     h.append("<br><br><br><br>");
-    //---------------------------------------------------------------------------------
-    //var input_username = addInput("プロフィールの名前");
-    //var input_pass = addInput("現在のパスワード");
-    // var input_pass_new = addInput("新しいパスワード(省略可)");
     addBtn("Avatar Settings", set_avatar);
     var view_avatar_elm = $("<div>").appendTo(h);
     addBtn("update profile", update_profile);
