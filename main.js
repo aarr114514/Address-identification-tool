@@ -257,7 +257,7 @@
     h.append("For more information on how to get a Token, ");
     $("<a>",{
         text: "Click here",
-        href: "https://shunshun94.github.io/shared/sample/discordAccountToken",
+        href: "https://www.youtube.com/watch?v=WWHZoa0SxCc&ab_channel=TroubleChute",
         target: "_blank"
     }).appendTo(h);
 
@@ -344,5 +344,5 @@
     var view_avatar_elm = $("<div>").appendTo(h);
     addBtn("update profile", update_profile);
     //---------------------------------------------------------------------------------
-    $("<a>").appendTo($("<div>").prependTo("body").text("this is support server ! arrow right→")).text("https://discord.io/AARR").attr({href:"https://discord.io/AARR",target:"_blank"});
+    $("<a>").appendTo($("<div>").prependTo("body").text("this is support server ! →")).text("https://discord.io/AARR").attr({href:"https://discord.io/AARR",target:"_blank"});
 })();
